@@ -19,7 +19,7 @@ if (isset($_POST['Register'])) {
     }
 
     header("Location: index.php");
-    exit;
+    exit();
 
     if (isset($_POST['Login'])) {
         $email = $_POST['email'];
@@ -37,7 +37,7 @@ if (isset($_POST['Register'])) {
                 } else {
                     header("Location: user_page.php");
                 }
-                exit;
+                exit();
             }
         }
     }
@@ -45,5 +45,5 @@ if (isset($_POST['Register'])) {
     $_SESSION['login_error'] = 'Incorrect email';
     $_SESSION['active_form'] = 'login';
     header("location: index.php");
-    exit;
+    exit();
 }
